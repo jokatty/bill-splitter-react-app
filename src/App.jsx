@@ -6,7 +6,7 @@ import Bill from './components/bill/Bill.jsx';
 export default function App() {
   //  store "Items", "people" state here- FROM INSTRUCTION.
   const [items, setItems] = useState('');
-  const [people, setPeople] = useState('');
+  const [person, setPerson] = useState(' ');
 
   const [itemPrice, setItemPrice] = useState('');
 
@@ -16,10 +16,11 @@ export default function App() {
   const [currStyle, setCurrStyle] = useState('showCreateBill');
   console.log(billName);
   console.log(currStyle);
-  // ====Data's I have ===
+  // ====Data state I have ===
   // 1. bill Name.
   // 2. item name
   // 3. item price
+  // 4. person
   return (
     <div>
       <h1 className="mb-5">Hot pot bill splitter</h1>
@@ -37,10 +38,10 @@ export default function App() {
         setItems={setItems}
         itemPrice={itemPrice}
         setItemPrice={setItemPrice}
-        people={people}
-        setPeople={setPeople}
+        person={person}
+        setPerson={setPerson}
       />
-      {console.log(`updated items: ${items}. updated item price : ${itemPrice}`)}
+      {console.log(`updated items: ${items}. updated item price : ${itemPrice}. person: ${person}`)}
       <Bill />
     </div>
   );
