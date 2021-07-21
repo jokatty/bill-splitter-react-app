@@ -4,20 +4,15 @@ import PersonForm from './PersonForm.jsx';
 
 export default function Form(props) {
   const {
-    items, setItems, itemPrice, setItemPrice, person, setPerson,
+    setItemNPrice, setPerson,
   } = props;
-  //  Form has two components: ItemForm and PersonForm for.
-  //  save state of ItemForm and Person here (parent element)
+  //  Form has two components: ItemForm and PersonForm.
   return (
     <div className="form">
       <ItemForm
-        items={items}
-        setItems={setItems}
-        itemPrice={itemPrice}
-        setItemPrice={setItemPrice}
+        setItemNPrice={setItemNPrice}
       />
-      {/* <ItemForm /> */}
-      <PersonForm person={person} setPerson={setPerson} />
+      <PersonForm setPerson={setPerson} />
     </div>
   );
 }

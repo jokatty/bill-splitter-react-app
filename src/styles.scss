@@ -1,72 +1,72 @@
 body {
-  background-color:#141E61;
+  background-color: #141e61;
   font-family: 'IBM Plex Mono', monospace;
 }
-h1{
+h1 {
   // width: 30%;
   font-family: 'McLaren', cursive;
 }
 #root {
   margin: 10%;
   text-align: center;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 // CREATE BILL
-.showCreateBill{
+.showCreateBill {
   display: 'block';
 }
-.hideCreateBill{
+.hideCreateBill {
   display: none;
 }
 
-// APP => FORM 
-.form{
-  background-color:#548CA8 ;
+// APP => FORM
+.form {
+  background-color: #548ca8;
   padding: 30px;
 }
 
 // APP => FORM =>ITEM
-.form-item{
-  background-color:#7ec7ba;
+.form-item {
+  background-color: #7ec7ba;
   padding: 20px;
   margin-top: 20px;
 }
 
 // APP => FORM =>PERSON
-.form-person{
-  background-color:#E8F6EF ;
+.form-person {
+  background-color: #e8f6ef;
   padding: 20px;
   margin-top: 20px;
 }
 
 //APP => BILL
-.bill{
-  background-color:#0A81AB ;
+.bill {
+  background-color: #0a81ab;
   padding: 30px;
   margin-top: 10%;
 }
 
 // APP => BILL => ITEM LIST
-.bill-item{
-  background-color:#28B5B5;
+.bill-item {
+  background-color: #28b5b5;
   padding: 20px;
   margin-top: 20px;
 }
 
 // APP => BILL => PERSON LIST
-.bill-person{
-  background-color:#28B5B5;
+.bill-person {
+  background-color: #28b5b5;
   padding: 20px;
   margin-top: 7%;
 }
 
 // other elements stlyes
-.total-bill{
+.total-bill {
   margin-top: 10%;
   margin-bottom: 5%;
   font-weight: 900;
 }
 
-.owed-by{
+.owed-by {
   font-weight: 100;
 }

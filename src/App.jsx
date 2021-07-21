@@ -5,44 +5,38 @@ import Bill from './components/bill/Bill.jsx';
 
 export default function App() {
   //  store "Items", "people" state here- FROM INSTRUCTION.
-  const [items, setItems] = useState('');
-  const [person, setPerson] = useState(' ');
-
-  const [itemPrice, setItemPrice] = useState('');
+  // const [items, setItems] = useState('');
+  // const [person, setPerson] = useState(' ');
+  const [person, setPerson] = useState([]);
+  const [itemNPrice, setItemNPrice] = useState([]);
+  // const [itemPrice, setItemPrice] = useState('');
 
   // *** store the input bill name in a state *** //
-  const [billName, setBillName] = useState(' ');
-  // **** Change the style state of the create bill **** //
-  const [currStyle, setCurrStyle] = useState('showCreateBill');
+  const [billName, setBillName] = useState('');
   console.log(billName);
-  console.log(currStyle);
+  console.log(itemNPrice);
+  console.log(person);
+
   // ====Data state I have ===
-  // 1. bill Name.
-  // 2. item name
-  // 3. item price
-  // 4. person
+  // 1. bill Name. (TODO: STORE IN DB)
+  // 2. Array of item name & item price Object.
+  // 3. array of people
+
   return (
     <div>
       <h1 className="mb-5">Hot pot bill splitter</h1>
       {/* first page element */}
-      <CreateBill
-        billName={billName}
-        setBillName={setBillName}
-        className={currStyle}
-        setCurrStyle={setCurrStyle}
-      />
+      {billName === '' ? (
+        <CreateBill
+          setBillName={setBillName}
+        />
+      ) : null}
       {/* main page (second screen) element */}
-      {/* <Form /> */}
       <Form
-        items={items}
-        setItems={setItems}
-        itemPrice={itemPrice}
-        setItemPrice={setItemPrice}
-        person={person}
+        setItemNPrice={setItemNPrice}
         setPerson={setPerson}
       />
-      {console.log(`updated items: ${items}. updated item price : ${itemPrice}. person: ${person}`)}
-      <Bill />
+      <Bill itemDetails={itemNPrice} person={person} />
     </div>
   );
 }
