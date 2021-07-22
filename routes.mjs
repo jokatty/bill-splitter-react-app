@@ -6,4 +6,10 @@ export default function routes(app) {
   app.get('/home', (request, response) => {
     response.sendFile(resolve('dist', 'main.html'));
   });
+  app.post('/home', async (request, response) => {
+    const { data } = request.body;
+    const bill = await db.Bill.create(data);
+    response.send('data saved in the db');
+    console.log(bill);
+  });
 }
